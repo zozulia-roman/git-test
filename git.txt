@@ -1,0 +1,41 @@
+git --help // все команды
+git --version //  получение версии
+git config --list // получение настроек в виде списка
+git config --global --list // только глобальные настройки
+git config --global user.name "Karpenko Eugene" // изменение настройки
+
+
+git init // инициализация git (надо быть в папке проекта)
+git status // информация о текущем git
+
+.gitignore - файл для игнорирования
+
+git add . // добавляем все файлы в staging area
+git add index.html // указанные файлы
+
+git commit -m "start project" // делаем commit - добавляем в репозиторий
+-m "Ключ для написания message"
+
+git log // получение информации о коммитах
+git commit -a // add + commit одновременно
+
+git log -p // видно будет что поменялось (CTRL + C выйти)
+
+git reset HEAD index.html // убираем файл из области подготовленных файлов staging area
+git log -2 // 2 последних коммита показывает
+git log --pretty=oneline // упрощенный вывод
+
+gitk // вызов визуального редактора коммитов
+
+git checkout 51f6f0f2becf8bc1d0db53aac828b5c7ffb551a3 // возвращение к нужному коммиту
+git checkout master // возвращаем все на место
+
+git revert HEAD --no-edit // удаление коммита
+
+git remote add origin https://github.com/karpenko-eugene/internetProgramming.git // связываем с удаленным репозиторием - краткое название origin
+git push -u origin master // протолкнем изменения из мастер в ориджин -u  в след раз не надо ветки писать
+
+git clone https://github.com/karpenko-eugene/internetProgramming.git // скачиваем репозиторий
+
+git pull // подтягиваем изменения
+git pull --rebase //
